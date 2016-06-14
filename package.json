@@ -1,7 +1,7 @@
 {
   "name": "ember-forge-ui-bootstrap4",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Twitter Bootstrap 4 companion addon for ember-forge/ember-forge-ui addon",
   "directories": {
     "doc": "doc",
     "test": "tests"
