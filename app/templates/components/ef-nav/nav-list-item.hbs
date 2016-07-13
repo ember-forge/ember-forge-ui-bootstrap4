@@ -1,0 +1,16 @@
+{{#if hasBlock}}
+  {{#ef-nav/nav-list-link
+    active=active
+    disabled=disabled
+    onClick=onClick
+  }}
+    {{yield}}
+  {{/ef-nav/nav-list-link}}
+{{else}}
+  {{ef-nav/nav-list-link
+    active=active
+    disabled=disabled
+    label=label
+    onClick=onClick
+  }}
+{{/if}}
