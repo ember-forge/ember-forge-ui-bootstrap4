@@ -1,13 +1,14 @@
-import Component from 'ember-forge-ui/components/ef-nav/nav-list';
+import Component from 'ember-forge-ui/components/ef-list';
 import Ember from 'ember';
 
 const {
-  computed
+  computed,
+  get
 } = Ember;
 
 /**
  * @module
- * @augments ember-forge-ui/components/ef-nav/nav-list
+ * @augments ember-forge-ui/components/ef-list
  */
 export default Component.extend({
 
@@ -18,15 +19,9 @@ export default Component.extend({
   // Attributes
 
   /** @type {String[]} */
-  classNameBindings: [
-    'pills:nav-pills',
-    'stackThePills:nav-stacked'
-  ],
-
-  /** @type {String[]} */
   classNames: [
-    'nav'
-  ],
+    'list-group'
+  ]
 
   // -------------------------------------------------------------------------
   // Actions
@@ -37,31 +32,10 @@ export default Component.extend({
   // -------------------------------------------------------------------------
   // Properties
 
-  /**
-   * Whether to display the nav items inline
-   *
-   * @type {Boolean}
-   */
-  inline: false,
-
   // -------------------------------------------------------------------------
   // Observers
 
   // -------------------------------------------------------------------------
   // Methods
-
-  /**
-   * Apply `.nav-stacked` if inline=false and pills=true
-   *
-   * @function
-   * @returns {Boolean}
-   */
-  stackThePills: computed(
-    'inline',
-    'pills',
-    function() {
-      return !this.get( 'inline' ) && this.get( 'pills' );
-    }
-  )
 
 });
