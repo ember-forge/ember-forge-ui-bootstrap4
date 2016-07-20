@@ -1,8 +1,8 @@
-import Component from 'ember-forge-ui/components/ef-nav/nav-list-item';
+import Component from 'ember-forge-ui/components/ef-list-item';
 
 /**
  * @module
- * @augments ember-forge-ui/components/ef-nav/nav-list-item
+ * @augments ember-forge-ui/components/ef-list-item
  */
 export default Component.extend({
 
@@ -14,7 +14,7 @@ export default Component.extend({
 
   /** @type {String[]} */
   classNames: [
-    'nav-item'
+    'list-group-item'
   ]
 
   // -------------------------------------------------------------------------
