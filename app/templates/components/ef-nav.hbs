@@ -1,18 +1,13 @@
 {{#if hasBlockParams}}
-  {{#ef-nav/nav-list
-    inline=inline
-    pills=pills
-  }}
+  {{#ef-list ordered=ordered}}
     {{yield (hash
       link=(component
-        "ef-nav/nav-list-item"
+        "ef-list-item"
         active=active
         disabled=disabled
-        label=label
-        onClick=onClick
       )
     )}}
-  {{/ef-nav/nav-list}}
+  {{/ef-list}}
 {{else}}
   You must use block params (<code>as | |</code>) when using the <code>ef-nav</code> component.
 {{/if}}
