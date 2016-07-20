@@ -18,16 +18,23 @@ export default Component.extend({
   // -------------------------------------------------------------------------
   // Attributes
 
-  /** @type {String[]} */
-  classNames: [
-    'list-group'
-  ]
-
   // -------------------------------------------------------------------------
   // Actions
 
   // -------------------------------------------------------------------------
   // Events
+
+  /**
+   * init event hook
+   *
+   * Configure the list
+   *
+   * @function
+   * @returns {undefined}
+   */
+  init() {
+    this._super(...arguments);
+  },
 
   // -------------------------------------------------------------------------
   // Properties
@@ -37,5 +44,21 @@ export default Component.extend({
 
   // -------------------------------------------------------------------------
   // Methods
+
+  /**
+   * Apply/remove class names dependent on whether an ordered list
+   *
+   * @private
+   * @returns {undefined}
+   */
+  setListType() {
+    this._super(...arguments);
+
+    if(get(this, 'ordered')) {
+      get(this, 'classNames').removeObject('list-group');
+    } else {
+      get(this, 'classNames').addObject('list-group');
+    }
+  }
 
 });
