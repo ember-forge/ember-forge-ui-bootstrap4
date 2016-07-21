@@ -36,6 +36,19 @@ export default Component.extend({
     this._super(...arguments);
   },
 
+  /**
+   * didInsertElement event hook
+   *
+   * Apply correct styling to list
+   *
+   * @returns {undefined}
+   */
+  didInsertElement() {
+    this._super(...arguments);
+
+    this.styleList();
+  },
+
   // -------------------------------------------------------------------------
   // Properties
 
@@ -49,6 +62,7 @@ export default Component.extend({
    * Apply/remove class names dependent on whether an ordered list
    *
    * @private
+   * @override
    * @returns {undefined}
    */
   setListType() {
@@ -58,6 +72,20 @@ export default Component.extend({
       get(this, 'classNames').removeObject('list-group');
     } else {
       get(this, 'classNames').addObject('list-group');
+    }
+  },
+
+  /**
+   * Apply/remove class names dependent on whether an ordered list
+   *
+   * @private
+   * @returns {undefined}
+   */
+  styleList() {
+    if(get(this, 'ordered')) {
+      this.$('.list-group-item').each(function() {
+        $(this).removeClass('list-group-item');
+      });
     }
   }
 
