@@ -2,7 +2,6 @@ import Component from 'ember-forge-ui/components/ef-list';
 import Ember from 'ember';
 
 const {
-  computed,
   get
 } = Ember;
 
@@ -83,9 +82,7 @@ export default Component.extend({
    */
   styleList() {
     if(get(this, 'ordered')) {
-      this.$('.list-group-item').each(function() {
-        $(this).removeClass('list-group-item');
-      });
+      this.$('.list-group-item').removeClass('list-group-item');
     }
   }
 
