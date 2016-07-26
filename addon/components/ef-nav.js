@@ -28,7 +28,7 @@ export default Component.extend({
    *
    * @returns {undefined}
    */
-  didInsertElement() {
+  didRender() {
     this._super(...arguments);
 
     this.setListContext();
@@ -61,11 +61,6 @@ export default Component.extend({
     this.$('.list-group')
       .removeClass('list-group')
       .addClass('nav');
-
-    // ef-list-item
-    this.$('.list-group-item')
-      .removeClass('list-group-item')
-      .addClass('nav-item');
   }
 
 });

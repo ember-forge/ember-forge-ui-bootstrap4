@@ -24,18 +24,6 @@ export default Component.extend({
   // Events
 
   /**
-   * init event hook
-   *
-   * Configure the list
-   *
-   * @function
-   * @returns {undefined}
-   */
-  init() {
-    this._super(...arguments);
-  },
-
-  /**
    * didInsertElement event hook
    *
    * Apply correct styling to list
