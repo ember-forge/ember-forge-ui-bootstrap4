@@ -1,4 +1,7 @@
+import Ember from 'ember';
 import Component from 'ember-forge-ui/components/ef-list-item';
+
+const computed = Ember.computed;
 
 /**
  * @module
@@ -13,9 +16,9 @@ export default Component.extend({
   // Attributes
 
   /** @type {String[]} */
-  classNames: [
-    'list-group-item'
-  ]
+  classNameBindings: [
+    'contextualClasses'
+  ],
 
   // -------------------------------------------------------------------------
   // Actions
@@ -25,6 +28,14 @@ export default Component.extend({
 
   // -------------------------------------------------------------------------
   // Properties
+
+  /** @type {String} */
+  contextualClasses: computed('isNav', function() {
+    if (!this.get('isNav')) {
+      return 'list-group-item';
+    }
+    return '';
+  })
 
   // -------------------------------------------------------------------------
   // Observers
