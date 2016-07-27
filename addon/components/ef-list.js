@@ -46,11 +46,9 @@ export default Component.extend({
   setContextClasses() {
     this._super(...arguments);
 
-    let classNames = get(this, 'classNames');
-
-    classNames.removeObject('list-group');
-    classNames.removeObject('nav');
-    classNames.addObject((get(this, 'usedAs') === 'nav') ? 'nav' : 'list-group');
+    if (!get(this, 'ordered')) {
+      get(this, 'classNames').addObject((get(this, 'usedAs') === 'nav') ? 'nav' : 'list-group');
+    }
   }
 
 });
