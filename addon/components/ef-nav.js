@@ -21,19 +21,6 @@ export default Component.extend({
   // -------------------------------------------------------------------------
   // Actions
 
-  /**
-   * didInsertElement event hook
-   *
-   * Contextualize the list component
-   *
-   * @returns {undefined}
-   */
-  didInsertElement() {
-    this._super(...arguments);
-
-    this.setListContext();
-  },
-
   // -------------------------------------------------------------------------
   // Events
 
@@ -45,27 +32,5 @@ export default Component.extend({
 
   // -------------------------------------------------------------------------
   // Methods
-
-  /**
-   * Set context-specific classes on these rendered components:
-   *   - ef-list
-   *   - ef-list-item
-   *
-   * @private
-   * @returns {undefined}
-   */
-  setListContext() {
-    this._super(...arguments);
-
-    // ef-list
-    this.$('.list-group')
-      .removeClass('list-group')
-      .addClass('nav');
-
-    // ef-list-item
-    this.$('.list-group-item')
-      .removeClass('list-group-item')
-      .addClass('nav-item');
-  }
 
 });

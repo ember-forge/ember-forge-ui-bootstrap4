@@ -23,31 +23,6 @@ export default Component.extend({
   // -------------------------------------------------------------------------
   // Events
 
-  /**
-   * init event hook
-   *
-   * Configure the list
-   *
-   * @function
-   * @returns {undefined}
-   */
-  init() {
-    this._super(...arguments);
-  },
-
-  /**
-   * didInsertElement event hook
-   *
-   * Apply correct styling to list
-   *
-   * @returns {undefined}
-   */
-  didInsertElement() {
-    this._super(...arguments);
-
-    this.styleList();
-  },
-
   // -------------------------------------------------------------------------
   // Properties
 
@@ -58,7 +33,11 @@ export default Component.extend({
   // Methods
 
   /**
-   * Apply/remove class names dependent on whether an ordered list
+   * Manage class names dependent on list type and context of usage
+   *
+   * Ordered lists do not have any classes applied
+   * Unordered lists are considered list groups and have their own class applied
+   * Unordered lists used as navs have their own class applied
    *
    * @private
    * @override
@@ -67,23 +46,11 @@ export default Component.extend({
   setListType() {
     this._super(...arguments);
 
-    if(get(this, 'ordered')) {
-      get(this, 'classNames').removeObject('list-group');
-    } else {
-      get(this, 'classNames').addObject('list-group');
-    }
-  },
+    let classNames = get(this, 'classNames');
 
-  /**
-   * Apply/remove class names dependent on whether an ordered list
-   *
-   * @private
-   * @returns {undefined}
-   */
-  styleList() {
-    if(get(this, 'ordered')) {
-      this.$('.list-group-item').removeClass('list-group-item');
-    }
+    classNames.removeObject('list-group');
+    classNames.removeObject('nav');
+    classNames.addObject((get(this, 'usedAs') === 'nav') ? 'nav' : 'list-group');
   }
 
 });

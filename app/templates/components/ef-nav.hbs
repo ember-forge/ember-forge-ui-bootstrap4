@@ -1,10 +1,14 @@
 {{#if hasBlockParams}}
-  {{#ef-list ordered=ordered}}
+  {{#ef-list
+    ordered=false
+    usedAs="nav"
+  }}
     {{yield (hash
       item=(component
         "ef-list-item"
         active=active
         disabled=disabled
+        usedAs="nav"
       )
     )}}
   {{/ef-list}}
