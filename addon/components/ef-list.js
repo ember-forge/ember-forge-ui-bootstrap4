@@ -43,7 +43,7 @@ export default Component.extend({
    * @override
    * @returns {undefined}
    */
-  setListType() {
+  setContextClasses() {
     this._super(...arguments);
 
     let classNames = get(this, 'classNames');
