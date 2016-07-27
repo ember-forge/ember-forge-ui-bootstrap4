@@ -39,13 +39,6 @@ export default Component.extend({
   // -------------------------------------------------------------------------
   // Properties
 
-  /**
-   * Whether the list items are ordered
-   *
-   * @type {Boolean}
-   */
-  ordered: false,
-
   // -------------------------------------------------------------------------
   // Observers
 
