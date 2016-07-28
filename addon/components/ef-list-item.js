@@ -23,19 +23,6 @@ export default Component.extend({
   // -------------------------------------------------------------------------
   // Events
 
-  /**
-   * init event hook
-   *
-   * Apply correct styling to list items
-   *
-   * @returns {undefined}
-   */
-  init() {
-    this._super(...arguments);
-
-    this.setContextStyles();
-  },
-
   // -------------------------------------------------------------------------
   // Properties
 
@@ -53,9 +40,12 @@ export default Component.extend({
    * Unordered lists used as navs have their item's class applied
    *
    * @private
+   * @override
    * @returns {undefined}
    */
   setContextStyles() {
+    this._super(...arguments);
+
     let classNames = get(this, 'classNames');
 
     if (!get(this, 'ordered')) {
