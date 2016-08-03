@@ -1,5 +1,4 @@
 import Component from 'ember-forge-ui/components/form/ef-fieldset';
-import Ember from 'ember';
 
 /**
  * @module
