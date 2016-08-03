@@ -1,10 +1,6 @@
 import Component from 'ember-forge-ui/components/ef-form';
 import Ember from 'ember';
 
-const {
-  get
-} = Ember;
-
 /**
  * @module
  * @augments ember-forge-ui/components/ef-form
