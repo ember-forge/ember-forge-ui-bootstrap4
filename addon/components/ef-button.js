@@ -39,7 +39,7 @@ export default Component.extend({
   /**
    * Bootstrap "theme" name
    *
-   * @type {?Theme}
+   * @type {?String}
    */
   theme: null,
 
@@ -58,7 +58,7 @@ export default Component.extend({
   themeClass: Ember.computed(
     'theme',
     function() {
-      const theme = this.get( 'theme' ).toLowerCase();
+      const theme = get(this, 'theme').toLowerCase();
 
       return `btn-${theme}`;
     })
