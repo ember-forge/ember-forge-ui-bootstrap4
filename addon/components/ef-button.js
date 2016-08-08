@@ -43,6 +43,15 @@ export default Component.extend({
    */
   theme: null,
 
+  /**
+   * Replace the default modifier classes with the `.btn-outline-*` ones to remove
+   * all background images and colors on any button.
+   *
+   * @see {@link http://v4-alpha.getbootstrap.com/components/buttons/#outline-buttons}
+   * @type {Boolean}
+   */
+  outline: false,
+
   // -------------------------------------------------------------------------
   // Observers
 
@@ -50,16 +59,22 @@ export default Component.extend({
   // Methods
 
   /**
-   * Converted theme string to Bootstrap button class
+   * Converted theme string to Bootstrap button class.  Accounts for `.btn-outline-*` modifiers.
    *
    * @function
    * @returns {String}
    */
   themeClass: Ember.computed(
+    'outline',
     'theme',
     function() {
-      const theme = get(this, 'theme').toLowerCase();
+      let theme = get(this, 'theme').toLowerCase();
+
+      if(get(this, 'outline')) {
+        theme = 'outline-' + theme;
+      }
 
       return `btn-${theme}`;
-    })
+    }
+  )
 });
