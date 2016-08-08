@@ -43,7 +43,7 @@ export default Component.extend({
    * @override
    * @returns {undefined}
    */
-  setContextStyles() {
+  setContextClasses() {
     this._super(...arguments);
 
     let classNames = get(this, 'classNames');
