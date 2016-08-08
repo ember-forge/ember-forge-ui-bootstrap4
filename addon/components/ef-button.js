@@ -6,29 +6,6 @@ const {
 } = Ember;
 
 /**
- * Theme values
- *
- * @memberof module:addon/components/ef-button
- * @enum {String}
- * @property {String} DANGER 'danger'
- * @property {String} INFO 'info'
- * @property {String} LINK 'link'
- * @property {String} PRIMARY 'primary'
- * @property {String} SECONDARY 'secondary'
- * @property {String} SUCCESS 'success'
- * @property {String} WARNING 'warning'
- */
-export const Theme = Object.freeze({
-  DANGER: 'danger',
-  INFO: 'info',
-  LINK: 'link',
-  PRIMARY: 'primary',
-  SECONDARY: 'secondary',
-  SUCCESS: 'success',
-  WARNING: 'warning'
-});
-
-/**
  * @module
  * @augments ember-forge-ui/components/ef-button
  */
@@ -81,7 +58,7 @@ export default Component.extend({
   themeClass: Ember.computed(
     'theme',
     function() {
-      const theme = this.get( 'theme' );
+      const theme = this.get( 'theme' ).toLowerCase();
 
       return `btn-${theme}`;
     })
