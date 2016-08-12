@@ -1,6 +1,6 @@
 {
   "name": "ember-forge-ui-bootstrap4",
-  "version": "0.0.0",
+  "version": "0.0",
   "description": "Twitter Bootstrap 4 companion addon for ember-forge-ui addon",
   "directories": {
     "doc": "doc",
@@ -11,11 +11,18 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "bugs": "https://github.com/ember-forge/ember-forge-ui-bootstrap4/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ember-forge/ember-forge-ui-bootstrap4.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "contributors": [
+    "Jeremy Brown <jeremy@notmessenger.com> (http://www.notmessenger.com)",
+    "Michael Carroll (https://github.com/juwara0)"
+  ],
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -40,7 +47,13 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-forge-ui",
+    "UI",
+    "UI components",
+    "form",
+    "list",
+    "nav"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
