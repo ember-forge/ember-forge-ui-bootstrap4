@@ -1,6 +1,8 @@
 import Component from 'ember-forge-ui/components/ef-form';
 
 /**
+ * form HTML element
+ *
  * @module
  * @augments ember-forge-ui/components/ef-form
  */

@@ -1,6 +1,8 @@
 import Component from 'ember-forge-ui/components/ef-button';
 
 /**
+ * button HTML element
+ *
  * @module
  * @augments ember-forge-ui/components/ef-button
  */

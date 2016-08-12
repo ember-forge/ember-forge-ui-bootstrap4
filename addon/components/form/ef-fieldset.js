@@ -1,6 +1,8 @@
 import Component from 'ember-forge-ui/components/form/ef-fieldset';
 
 /**
+ * fieldset HTML element
+ *
  * @module
  * @augments ember-forge-ui/components/form/ef-fieldset
  */

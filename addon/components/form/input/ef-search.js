@@ -1,6 +1,8 @@
 import Component from 'ember-forge-ui/components/form/input/ef-search';
 
 /**
+ * input[type="search"] HTML element
+ *
  * @module
  * @augments ember-forge-ui/components/form/input/ef-search
  */

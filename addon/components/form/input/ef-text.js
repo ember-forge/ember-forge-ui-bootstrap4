@@ -1,6 +1,8 @@
 import Component from 'ember-forge-ui/components/form/input/ef-text';
 
 /**
+ * input[type="text"] HTML element
+ *
  * @module
  * @augments ember-forge-ui/components/form/input/ef-text
  */
