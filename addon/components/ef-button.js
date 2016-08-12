@@ -1,5 +1,4 @@
 import Component from 'ember-forge-ui/components/ef-button';
-import Ember from 'ember';
 
 /**
  * @module
