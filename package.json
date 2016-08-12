@@ -1,6 +1,6 @@
 {
   "name": "ember-forge-ui-bootstrap4",
-  "version": "0.0",
+  "version": "0.0.0",
   "description": "Twitter Bootstrap 4 companion addon for ember-forge-ui addon",
   "directories": {
     "doc": "doc",
