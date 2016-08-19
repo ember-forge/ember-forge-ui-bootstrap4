@@ -1,7 +1,7 @@
 import Component from 'ember-forge-ui/components/form/input/ef-color';
 
 /**
- * input[type="tel"] HTML element
+ * input[type="color"] HTML element
  *
  * @module
  * @augments ember-forge-ui/components/form/input/ef-color
