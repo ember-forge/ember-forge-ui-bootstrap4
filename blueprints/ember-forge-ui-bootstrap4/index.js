@@ -5,7 +5,7 @@ module.exports = {
   afterInstall: function() {
     return this.addAddonsToProject({
       packages: [
-        'ember-forge/ember-forge-ui',
+        {name: 'ember-forge/ember-forge-ui', target: 'form-components'}
       ]
     });
   }
