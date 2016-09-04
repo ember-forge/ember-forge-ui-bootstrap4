@@ -15,6 +15,11 @@ export default Component.extend({
   // Attributes
 
   /** @type {String[]} */
+  classNameBindings: [
+    'errorState:form-control-danger'
+  ],
+
+  /** @type {String[]} */
   classNames: [
     'form-control'
   ]
