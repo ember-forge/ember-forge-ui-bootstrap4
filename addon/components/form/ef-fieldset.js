@@ -19,11 +19,6 @@ export default Component.extend(ErrorState, {
   /** @type {String[]} */
   classNameBindings: [
     'errorState:has-danger'
-  ],
-
-  /** @type {String[]} */
-  classNames: [
-    'form-group'
   ]
 
   // -------------------------------------------------------------------------
