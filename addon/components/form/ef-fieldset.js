@@ -6,7 +6,7 @@ import Component from 'ember-forge-ui/components/form/ef-fieldset';
  * @module
  * @augments ember-forge-ui/components/form/ef-fieldset
  */
-export default Component.extend(ErrorState, {
+export default Component.extend({
 
   // -------------------------------------------------------------------------
   // Dependencies
